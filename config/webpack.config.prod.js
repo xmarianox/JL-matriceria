@@ -132,6 +132,7 @@ module.exports = {
         loader: 'babel',
         
       },
+      // Sass loaders
       {
         test: /\.scss$/,
         include: paths.appSrc,

@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
-// import Helmet from "react-helmet";
+
 // main theme assets
-// import '../styles/main.scss';
+import './../styles/main.scss';
+
+import Appbar from './../components/Appbar/Appbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*
-        <Helmet 
-          title=""
-          titleTemplate="Grupo Upgrade | %s"
-          defaultTitle="Grupo Upgrade" />  
-        */}
+        <Appbar />
+
         {/* Page */}
         {this.props.children}
       </div>
