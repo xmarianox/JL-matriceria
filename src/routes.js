@@ -8,7 +8,7 @@ const routes = () => {
   return (
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
-    {/*    
+    {/*
       <Route path="/proyectos" component={Proyectos}/>
       <Route path="/proyectos/:proyecto_slug" component={ProyectoDetalle}/>
       <Route path="/sobre-nosotros" component={SobreNosotros}/>

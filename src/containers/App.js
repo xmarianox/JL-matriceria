@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-
 // main theme assets
-import './../styles/main.scss';
+import '../styles/main.scss';
 
-import Appbar from './../components/Appbar/Appbar';
+import Appbar from '../components/Appbar/Appbar';
 
 class App extends Component {
   render() {

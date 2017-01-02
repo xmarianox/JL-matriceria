@@ -14,18 +14,36 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+<!--     <style>
+      html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+      ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+      tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+      summary,time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+      article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+      body { line-height: 1; }
+      ol, ul { list-style: none; }
+      blockquote, q { quotes: none; }
+      blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+      table { border-collapse: collapse; border-spacing: 0; }
+      * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; outline: none; }
+      body { font-family: 'Lato', sans-serif; }
+    </style> -->
   </head>
   <body>
     <main id="root"></main>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
+    <!-- Google Font Async Loader -->
+    <script>
+      WebFontConfig = {
+          google: {
+            families: ['Lato:400,700,900']
+          }
+      };
+      (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+          s.parentNode.insertBefore(wf, s);
+      })(document);
+    </script>
   </body>
 </html>
