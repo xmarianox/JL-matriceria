@@ -1,0 +1,17 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- App Component
+// =============================================================================
+.home-container {
+  @include size(100%, auto);
+  min-height: 100vh;
+  overflow: hidden;
+  // responsive
+  // @media #{$breakpoint-smartphone-medium} {}
+  // @media #{$breakpoint-smartphone-big-landscape} {}
+  // @media #{$breakpoint-tablet-land} {}
+  // @media #{$breakpoint-laptop-small} {}
+  // @media #{$breakpoint-laptop-big} {}
+  // @media #{$breakpoint-desktop-medium} {}
+}

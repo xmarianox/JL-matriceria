@@ -1,0 +1,230 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- AppBar Component
+// =============================================================================
+.AppBar {
+  @include size(100%, auto);
+  background-color: $white;
+  //
+  overflow: hidden;
+  // position
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  &-container {
+    @include size(100%, auto);
+    background-color: $white;
+    position: relative;
+    padding: 10px 16px;
+    overflow: hidden;
+    // flex-props
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-logo {
+    @include size(57px, 56px);
+    display: block;
+    margin: auto 15px;
+  }
+
+  p {
+    display: none;
+  }
+
+  .btn-hamburger {
+    position: absolute;
+    left: 16px;
+  }
+
+  // responsive
+  @media #{$breakpoint-tablet-land} {
+    &-container {
+      padding: 20px 24px;
+    }
+
+    &-logo {
+      @include size(196px, 34px);
+    }
+
+    .btn-hamburger {
+      left: 24px;
+    }
+
+    p {
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      right: 24px;
+      // text
+      @include font-size(18px);
+      @include line-height(32px);
+      color: $darkBlue;
+
+      .icon {
+        @include size(34px, 34px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
+
+        svg {
+          @include size(34px, 34px);
+          fill: $darkBlue;
+        }
+
+        &:hover {
+          svg {
+            fill: $blueFinished;
+          }
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// -- Menu Navigation
+// =============================================================================
+.Menu {
+  @include size(100%, auto);
+  background-color: $darkBlue;
+  overflow: hidden;
+  display: none;
+
+  // position
+  position: fixed;
+  top: 64px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+
+  &.open {
+    // flex-props
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    @include size(100%, auto);
+    margin: auto;
+    // flex-props
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li {
+    @include font-size(25px);
+    @include line-height(60px);
+    text-align: center;
+    margin: auto;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  @media #{$breakpoint-tablet-land} {
+    @include size(100%, auto);
+    max-width: 214px;
+    top: 84px;
+
+    ul {
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-left: 24px;
+      padding-top: 30px;
+      margin: 0;
+    }
+
+    li {
+      @include font-size(19px);
+      margin: 0;
+    }
+  }
+}
+
+// =============================================================================
+// -- Hamburger Button
+// =============================================================================
+.btn-hamburger {
+  background: transparent;
+  border: none;
+  height: 29px;
+  padding: 0;
+  margin: 0;
+  // margin: 8px 0;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  @include border-radius(0);
+  /* */
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transition: 0;
+  }
+  &.active {
+    -webkit-transform: scale3d(.8,.8,.8);
+        transform: scale3d(.8,.8,.8);
+  }
+
+  //three-lines to x
+  &.active {
+    .lines {
+      background: transparent;
+      &:before, &:after{
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        top:0;
+        width: $button-size;
+      }
+      &:before{
+        -webkit-transform: rotate3d(0,0,1,45deg);
+                transform: rotate3d(0,0,1,45deg);
+      }
+      &:after{
+        -webkit-transform: rotate3d(0,0,1,-45deg);
+                transform: rotate3d(0,0,1,-45deg);
+      }
+    }
+  }
+}
+
+//common to all three-liners
+.lines {
+  @include line;
+  position: relative;
+
+  &:before, &:after {
+   @include line;
+    position: absolute;
+    left:0;
+    content: '';
+    -webkit-transform-origin: $button-size/14 center;
+            transform-origin: $button-size/14 center;
+  }
+  &:before {
+    top: $button-size/4;
+  }
+  &:after {
+    top: -$button-size/4;
+  }
+}
+
+

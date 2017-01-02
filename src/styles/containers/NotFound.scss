@@ -1,0 +1,55 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- App Component
+// =============================================================================
+.not-found-container {
+    @include size(100%, auto);
+    min-height: 450px;
+    margin-top: 64px;
+    overflow: hidden;
+
+    article {
+        @include size(100%, auto);
+        padding: 30px 16px;
+        text-align: center;
+    }
+
+    h1 {
+        // text gradients
+        background: #003366; /* Old browsers */
+        background: -moz-linear-gradient(left,  #003366 0%, #3878be 30%, #0197af 60%, #01a6a5 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #003366 0%,#3878be 30%,#0197af 60%,#01a6a5 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #003366 0%,#3878be 30%,#0197af 60%,#01a6a5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // text
+        @include font-size(60px);
+        @include line-height(70px);
+        font-weight: 600;
+        //
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    p {
+        @include font-size(20px);
+        @include line-height(30px);
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    // responsive
+    @media #{$breakpoint-tablet-port} {
+        min-height: calc(100vh - 300px);
+    }
+    @media #{$breakpoint-tablet-land} {
+        min-height: calc(100vh - 198px);
+        margin-top: 84px;
+
+        article {
+            max-width: $grid-max-width;
+            margin: 0 auto;
+        }
+    }
+}
