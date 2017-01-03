@@ -6,8 +6,12 @@
 .Search {
     position: absolute;
     right: 16px;
+    top: 22px;
 
     &-btn {
         @include size(29px, 29px);
+        @include border-radius(0px);
+        background-color: $white;
+        border: none;
     }
 }

@@ -42,6 +42,7 @@
   .btn-hamburger {
     position: absolute;
     left: 16px;
+    top: 22px;
   }
 
   // responsive
@@ -92,70 +93,81 @@
 // =============================================================================
 // -- Menu Navigation
 // =============================================================================
+// .Menu {
+//   @include size(100%, auto);
+//   background-color: $darkBlue;
+//   overflow: hidden;
+//   display: none;
+
+//   // position
+//   position: fixed;
+//   top: 64px;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   z-index: 101;
+
+//   &.open {
+//     // flex-props
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+
+//   ul {
+//     @include size(100%, auto);
+//     margin: auto;
+//     // flex-props
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+
+//   li {
+//     @include font-size(25px);
+//     @include line-height(60px);
+//     text-align: center;
+//     margin: auto;
+//   }
+
+//   a {
+//     color: $white;
+//     text-decoration: none;
+//   }
+
+//   @media #{$breakpoint-tablet-land} {
+//     @include size(100%, auto);
+//     max-width: 214px;
+//     top: 84px;
+
+//     ul {
+//       align-items: flex-start;
+//       justify-content: flex-start;
+//       padding-left: 24px;
+//       padding-top: 30px;
+//       margin: 0;
+//     }
+
+//     li {
+//       @include font-size(19px);
+//       margin: 0;
+//     }
+//   }
+// }
+
 .Menu {
-  @include size(100%, auto);
-  background-color: $darkBlue;
-  overflow: hidden;
-  display: none;
-
-  // position
-  position: fixed;
-  top: 64px;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 101;
-
-  &.open {
-    // flex-props
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  ul {
     @include size(100%, auto);
-    margin: auto;
-    // flex-props
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  li {
-    @include font-size(25px);
-    @include line-height(60px);
-    text-align: center;
-    margin: auto;
-  }
-
-  a {
-    color: $white;
-    text-decoration: none;
-  }
-
-  @media #{$breakpoint-tablet-land} {
-    @include size(100%, auto);
-    max-width: 214px;
-    top: 84px;
-
-    ul {
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding-left: 24px;
-      padding-top: 30px;
-      margin: 0;
-    }
-
-    li {
-      @include font-size(19px);
-      margin: 0;
-    }
-  }
+    background-color: $white;
+    overflow: hidden;
+    //
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
 }
 
 // =============================================================================

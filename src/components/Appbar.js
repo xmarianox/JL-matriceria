@@ -22,16 +22,27 @@ class Appbar extends Component {
 
     render() {
         return (
-            <header className="AppBar">
-                <div className="AppBar-container">
-                    <button onClick={this._toggleMenu.bind(this)} className={ this.state.menu_open ? 'btn-hamburger active' : 'btn-hamburger' } type="button" role="button"><span className="lines"></span></button>
-                    
-                    <img src={icMatriceria} alt="JL Matriceria" className="AppBar-logo" />
-                    <img src={icPlastic} alt="JL Plastic" className="AppBar-logo" />
+            <div>
+                <header className="AppBar">
+                    <div className="AppBar-container">
+                        <button onClick={this._toggleMenu.bind(this)} className={ this.state.menu_open ? 'btn-hamburger active' : 'btn-hamburger' } type="button" role="button"><span className="lines"></span></button>
+                        
+                        <img src={icMatriceria} alt="JL Matriceria" className="AppBar-logo" />
+                        <img src={icPlastic} alt="JL Plastic" className="AppBar-logo" />
 
-                    <Search />
+                        <Search />
+                    </div>
+                </header>
+
+                <div className="Menu">
+                    <ul>
+                        <li>Catálogo</li>
+                        <li>Merchandising</li>
+                        <li>Contacto</li>
+                        <li>Medios de pago</li>
+                    </ul>
                 </div>
-            </header>
+            </div>
         );
     }
 }
