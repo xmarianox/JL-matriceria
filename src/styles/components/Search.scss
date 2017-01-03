@@ -1,0 +1,13 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- Search Component
+// =============================================================================
+.Search {
+    position: absolute;
+    right: 16px;
+
+    &-btn {
+        @include size(29px, 29px);
+    }
+}

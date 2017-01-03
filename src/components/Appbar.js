@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './Search';
 // styles
 import '../styles/components/AppBar.scss';
 // assets
@@ -24,8 +25,11 @@ class Appbar extends Component {
             <header className="AppBar">
                 <div className="AppBar-container">
                     <button onClick={this._toggleMenu.bind(this)} className={ this.state.menu_open ? 'btn-hamburger active' : 'btn-hamburger' } type="button" role="button"><span className="lines"></span></button>
+                    
                     <img src={icMatriceria} alt="JL Matriceria" className="AppBar-logo" />
                     <img src={icPlastic} alt="JL Plastic" className="AppBar-logo" />
+
+                    <Search />
                 </div>
             </header>
         );
