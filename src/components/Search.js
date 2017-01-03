@@ -6,10 +6,27 @@ import icSearch from '../images/ic_search.svg';
 
 class Search extends Component {
 
+    constructor() {
+        super();
+
+        this.state = {
+            search_open: false
+        };
+    }
+
+    _toggleSearchBar() {
+        this.setState({ search_open: !this.state.search_open });
+        //console.log('Open Search Bar');
+    }
+
     render() {
         return (
             <div className="Search">
-                <button className="Search-btn"><img src={icSearch} alt="Search" /></button>
+                <button className="Search-btn" onClick={this._toggleSearchBar.bind(this)}>
+                    <img src={icSearch} alt="Search" />
+                </button>
+
+
             </div>
         );
     }
