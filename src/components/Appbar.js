@@ -34,7 +34,7 @@ class Appbar extends Component {
                     </div>
                 </header>
 
-                <div className={ this.state.menu_open ? 'Menu open' : 'Menu' }>
+                <nav className={ this.state.menu_open ? 'Menu open' : 'Menu' }>
                     <ul>
                         <li>
                             <span>CATÁLOGO</span>
@@ -48,7 +48,7 @@ class Appbar extends Component {
                         <li>CONTACTO</li>
                         <li>MEDIOS DE PAGO</li>
                     </ul>
-                </div>
+                </nav>
             </div>
         );
     }
