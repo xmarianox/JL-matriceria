@@ -34,12 +34,19 @@ class Appbar extends Component {
                     </div>
                 </header>
 
-                <div className="Menu">
+                <div className={ this.state.menu_open ? 'Menu open' : 'Menu' }>
                     <ul>
-                        <li>Catálogo</li>
-                        <li>Merchandising</li>
-                        <li>Contacto</li>
-                        <li>Medios de pago</li>
+                        <li>
+                            <span>CATÁLOGO</span>
+                            <ul>
+                                <li><a href="" title="Vasos">Vasos</a></li>
+                                <li><a href="" title="Servilleteros">Servilleteros</a></li>
+                                <li><a href="" title="Tuppers">Tuppers</a></li>
+                            </ul>
+                        </li>
+                        <li>MERCHANDISING</li>
+                        <li>CONTACTO</li>
+                        <li>MEDIOS DE PAGO</li>
                     </ul>
                 </div>
             </div>
