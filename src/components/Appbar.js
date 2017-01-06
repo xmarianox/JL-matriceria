@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import UserBlock from './UserBlock';
+import CardBlock from './CardBlock';
 // styles
 import '../styles/components/AppBar.scss';
 // assets
@@ -35,6 +37,11 @@ class Appbar extends Component {
                 </header>
 
                 <nav className={ this.state.menu_open ? 'Menu open' : 'Menu' }>
+
+                    <UserBlock userName="Mariano" />
+
+                    <CardBlock />
+
                     <ul>
                         <li>
                             <span>CATÁLOGO</span>
