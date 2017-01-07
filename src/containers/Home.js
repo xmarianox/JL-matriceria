@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-
 import '../styles/containers/Home.scss';
+
+import MainImageSlider from '../components/MainImageSlider';
+
 
 class App extends Component {
   render() {
     return (
       <section className="home-container">
-          <h1>HOME</h1>
+          
+        <MainImageSlider />
+
       </section>
     )
   }

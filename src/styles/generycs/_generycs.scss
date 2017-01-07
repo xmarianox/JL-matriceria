@@ -21,16 +21,8 @@ body {
 
 section {
   @include size(100%, auto);
-  padding-top: 76px; 
 }
 
 // =============================================================================
 // - TEXTS
 // =============================================================================
-
-// share button
-.at-expanding-share-button-desktop,
-.at-expanding-share-button-mobile  {
-  display: none !important;
-  visibility: hidden;
-}
