@@ -39,6 +39,7 @@ class MainImageSlider extends Component {
                     showThumbnails={false}
                     showFullscreenButton={false}
                     showPlayButton={false}
+                    showNav={false}
                     showBullets={true}
                     onImageLoad={this.handleImageLoad}
                 />
