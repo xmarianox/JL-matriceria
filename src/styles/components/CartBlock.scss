@@ -1,0 +1,23 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- CartBlock Component
+// =============================================================================
+.CartBlock {
+    // flex-props
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .shoppingCartIcon {
+        @include size(25px, 21px);
+        display: block;
+    }
+
+    span {
+        font-weight: 700;
+        color: $orange;
+    }
+}

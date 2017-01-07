@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // styles
 import '../styles/components/Search.scss';
 // assets
-import icSearch from '../images/ic_search.svg';
+import icSearch from '../images/icons/ic_search.svg';
 
 class Search extends Component {
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import UserBlock from './UserBlock';
-import CardBlock from './CardBlock';
+import CartBlock from './CartBlock';
 // styles
 import '../styles/components/AppBar.scss';
 // assets
@@ -40,7 +40,7 @@ class Appbar extends Component {
 
                     <UserBlock userName="Mariano" />
 
-                    <CardBlock />
+                    <CartBlock />
 
                     <ul>
                         <li>
