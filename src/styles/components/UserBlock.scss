@@ -3,7 +3,7 @@
 // =============================================================================
 // -- CartBlock Component
 // =============================================================================
-.CartBlock {
+.UserBlock {
     margin: 5px auto;
     margin-left: 0px;
     padding: 0 16px;
@@ -14,15 +14,22 @@
     align-items: center;
     justify-content: space-between;
 
-    .shoppingCartIcon {
-        @include size(25px, 21px);
-        display: block;
+
+    a {
+        @include font-size(15px);
+        @include line-height(22px);
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:first-child {
+            font-weight: 900;
+        }
     }
 
-    span {
-        font-weight: 700;
-        @include font-size(15px);
-        @include line-height(21px);
-        color: $orange;
+    .divider {
+        @include size(2px, 22px);
+        display: inline-block;
+        border-right: 2px solid $lightGrey-2;
+        margin: auto 12px;
     }
 }

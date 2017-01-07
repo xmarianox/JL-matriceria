@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/components/UserBlock.scss';
 
 class UserBlock extends Component {
 
@@ -14,18 +15,18 @@ class UserBlock extends Component {
 
         if (this.state.isUserLogged) {
             return (
-                <div>
-                    <span>Hola {userName}</span>
+                <div className="UserBlock loggedIn">
+                    <span>Hola {userName}!</span>
                 </div>
-            )
+            );
         } else {
             return (
-                <div>
+                <div className="UserBlock">
                     <a href="">logueate</a>
-                    <span>|</span>
+                    <span className="divider"></span>
                     <a href="">registrate</a>
                 </div>
-            )
+            );
         }
     }
 
