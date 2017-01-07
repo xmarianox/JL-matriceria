@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-
-import '../../node_modules/react-image-gallery/styles/scss/image-gallery.scss'
+// components
 import ImageGallery from 'react-image-gallery';
-
+import '../../node_modules/react-image-gallery/styles/scss/image-gallery.scss'
+// styles
+import '../styles/components/MainImageSlider.scss';
 
 class MainImageSlider extends Component {
 
@@ -30,16 +31,18 @@ class MainImageSlider extends Component {
         ]
 
         return (
-           <ImageGallery 
-            ref={i => this._imageGallery = i}
-            items={images}
-            slideInterval={2000}
-            showThumbnails={false}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            showBullets={true}
-            onImageLoad={this.handleImageLoad}
-           />
+           <div className="MainImageSlider">
+               <ImageGallery 
+                    ref={i => this._imageGallery = i}
+                    items={images}
+                    slideInterval={2000}
+                    showThumbnails={false}
+                    showFullscreenButton={false}
+                    showPlayButton={false}
+                    showBullets={true}
+                    onImageLoad={this.handleImageLoad}
+                />
+           </div>
         );
     }
 }
