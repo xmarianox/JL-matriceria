@@ -40,7 +40,7 @@ class Appbar extends Component {
 
                     <UserBlock userName="Mariano" />
 
-                    <CartBlock itemsQuantity={3} cartAmount={45.56} />
+                    <CartBlock itemsQuantity={1} cartAmount={45.56} />
 
                     <ul>
                         <li>

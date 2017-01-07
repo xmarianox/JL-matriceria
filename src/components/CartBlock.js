@@ -6,11 +6,7 @@ import ic_cart from '../images/icons/ic_shopping_cart.svg';
 class CartBlock extends Component {
 
     _renderQuantity(quantity) {
-        if (quantity === 1) {
-            return `${quantity} ítem`;
-        } else {
-            return `${quantity} ítems`;
-        }
+       return quantity === 1 ? `${quantity} ítem` : `${quantity} ítems`;
     }
 
     render() {
