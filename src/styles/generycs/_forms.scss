@@ -10,20 +10,44 @@
 // -  Inputs
 // =============================================================================
 input {
-  @include size(100%, 49px);
-  @include border-radius(6px);
-  border: 1px solid $darkBlue;
+  @include size(100%, 39px);
+  @include border-radius(50px);
+  border: 1px solid $white;
+  background-color: $white;
   display: block;
   padding: 0 16px;
   // text
-  font-family: 'Open Sans';
-  @include font-size(18px);
-  @include line-height(47px);
-  color: $black;
+  font-family: 'Lato', sans-serif;
+  @include font-size(16px);
+  @include line-height(37px);
+  color: $ultraDarkGray;
+  text-align: center;
+
   &.error{
     color: $red;
   }
 }
+
+
+textarea {
+  @include size(100%, 78px);
+  @include border-radius(50px);
+  border: 1px solid $white;
+  background-color: $white;
+  display: block;
+  padding: 0 16px;
+  // text
+  font-family: 'Lato', sans-serif;
+  @include font-size(16px);
+  @include line-height(37px);
+  color: $ultraDarkGray;
+  text-align: center;
+
+  &.error{
+    color: $red;
+  }
+}
+
 
 button[disabled=false] {
   cursor: pointer;
