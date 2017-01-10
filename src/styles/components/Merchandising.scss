@@ -1,0 +1,50 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- Merchandising Component
+// =============================================================================
+.MerchandisingComponent {
+    @include size(100%, auto);
+    overflow: hidden;
+    //
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: stretch;
+    justify-content: center;
+
+    .merchandising-item {
+        flex-basis: 100%;
+        height: 280px;
+        background-color: $lightGrey;
+
+        &:last-child {
+            padding: 16px;
+        }
+    }
+
+    img {
+        @include size(100%, 100%);
+        object-fit: cover;
+        display: block;
+    }
+
+    // TEXTS
+    h2 {
+        font-weight: 900;
+        @include font-size(22px);
+        @include line-height(38px);
+        color: $darkBlue;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-weight: 400;
+        @include font-size(16px);
+        @include line-height(22px);
+        color: $darkGray;
+        text-align: center;
+    }
+}
