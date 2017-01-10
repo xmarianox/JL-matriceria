@@ -17,7 +17,7 @@ class Merchandising extends Component {
                     <p>Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.  tellus a odio tincidunt auctor a  velit. Nam nec tellus a odio tincidunt auctor a ornare.  tellus a odio tincid
  velit. Nam nec tellus a odio tincidunt auctor a ornare.  tellus a odio tincidunt auctor a</p>
 
-                    <button className="btn">hacé tu pedido</button>
+                    <button className="btn btn_action">hacé tu pedido</button>
                 </div>
             </article>
         );
