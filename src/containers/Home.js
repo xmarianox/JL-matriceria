@@ -3,6 +3,7 @@ import '../styles/containers/Home.scss';
 
 import MainImageSlider from '../components/MainImageSlider';
 import Merchandising from '../components/Merchandising';
+import MercadoPago from '../components/MercadoPago';
 
 class App extends Component {
   render() {
@@ -12,6 +13,8 @@ class App extends Component {
         <MainImageSlider />
 
         <Merchandising />
+
+        <MercadoPago />
 
       </section>
     )
