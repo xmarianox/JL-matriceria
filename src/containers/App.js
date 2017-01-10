@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import '../styles/main.scss';
 
 import Appbar from '../components/Appbar';
+import Footer from '../components/Footer';
 
 class App extends Component {
   render() {
@@ -12,6 +13,8 @@ class App extends Component {
 
         {/* Page */}
         {this.props.children}
+
+        <Footer />
       </div>
     )
   }

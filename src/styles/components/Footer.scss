@@ -1,0 +1,19 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- Footer Component
+// =============================================================================
+footer {
+    @include size(100%, auto);
+    background-color: $black;
+    padding: 16px;
+
+    p {
+        font-weight: 700;
+        @include font-size(15px);
+        @include line-height(37px);
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+    }
+}
