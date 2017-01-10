@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import '../styles/components/ContactBlock';
 
 class ContactBlock extends Component {
     render() {
         return (
-            <article>
+            <article className="ContactBlock">
                 <div>
                     <h2>contacto</h2>
 

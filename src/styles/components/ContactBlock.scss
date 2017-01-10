@@ -1,0 +1,17 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- ContactBlock Component
+// =============================================================================
+.ContactBlock {
+    @include size(100%, auto);
+    overflow: hidden;
+    margin: 0 auto 16px;
+    background-color: $lightGrey;
+    //
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: stretch;
+    justify-content: center;
+}
