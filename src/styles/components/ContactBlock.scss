@@ -41,4 +41,11 @@
         color: $ultraDarkGray;
         text-align: center;
     }
+
+    // MAP
+    iframe {
+        @include size(100%, auto);
+        min-height: 250px;
+        border: none;
+    }
 }

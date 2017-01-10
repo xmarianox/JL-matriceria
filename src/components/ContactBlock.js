@@ -30,7 +30,7 @@ class ContactBlock extends Component {
                 </div>
 
                 <div className="ContactBlock-item">
-
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.672576213905!2d-58.530472084565524!3d-34.53652256145324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0cbb1827f8f%3A0xcb53be745807676f!2sLuis+Mar%C3%ADa+Drago+5252%2C+B1605AZB+Munro%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1484018978934" width="600" height="450" frameBorder="0" allowFullScreen></iframe>
                 </div>
             </article>
         );
