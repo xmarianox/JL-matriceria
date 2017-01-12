@@ -12,15 +12,18 @@ class ContactBlock extends Component {
 
                     <form>
                         <div className="form-control">
-                            <input type="text" name="contact-name" id="contact-name" placeholder="Nombre" />
+                            <label htmlFor="contact-name">Nombre</label>
+                            <input type="text" name="contact-name" id="contact-name" />
                         </div>
 
                         <div className="form-control">
-                            <input type="email" name="contact-email" id="contact-email" placeholder="Email" />
+                            <label htmlFor="contact-email">Email</label>
+                            <input type="email" name="contact-email" id="contact-email" />
                         </div>
 
                         <div className="form-control">
-                            <textarea name="contact-text" id="contact-text" placeholder="Consulta"></textarea>
+                            <label htmlFor="contact-text">Consulta</label>
+                            <textarea name="contact-text" id="contact-text"></textarea>
                         </div>
 
                         <div className="form-control">
