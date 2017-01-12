@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import '../styles/containers/Home.scss';
 
 import MainImageSlider from '../components/MainImageSlider';
-import Merchandising from '../components/Merchandising';
-import MercadoPago from '../components/MercadoPago';
-import ContactBlock from '../components/ContactBlock';
+import ProductList     from '../components/ProductList';
+import Merchandising   from '../components/Merchandising';
+import MercadoPago     from '../components/MercadoPago';
+import ContactBlock    from '../components/ContactBlock';
 
 class App extends Component {
   render() {
@@ -12,6 +13,8 @@ class App extends Component {
       <section className="home-container">
           
         <MainImageSlider />
+
+        <ProductList />
 
         <Merchandising />
 
