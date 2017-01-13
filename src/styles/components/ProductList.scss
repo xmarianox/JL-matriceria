@@ -1,0 +1,50 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- ProductList Component
+// =============================================================================
+.ProductList {
+    @include size(100%, auto);
+    overflow: hidden;
+    padding: 6px;
+    // flex
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.ProductItem {
+    flex-basis: 48%;
+    margin: 0 auto 16px;
+    margin-left: 0;
+    overflow: hidden;
+
+    //&:last-child {}
+    &:nth-child(2n) {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    figure {
+        @include size(100%, auto);
+        overflow: hidden;
+
+        img {
+            @include size(100%, 100%);
+            min-height: 250px;
+        }
+    }
+
+    figcaption {
+        @include size(100%, auto);
+        overflow: hidden;
+        // flex
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
