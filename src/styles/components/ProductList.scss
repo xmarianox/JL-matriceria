@@ -34,12 +34,14 @@
         img {
             @include size(100%, 100%);
             min-height: 250px;
+            margin: 0 auto;
         }
     }
 
     figcaption {
         @include size(100%, auto);
         overflow: hidden;
+        padding: 5px 0;
         // flex
         display: flex;
         flex-direction: row;
@@ -47,4 +49,16 @@
         align-items: center;
         justify-content: space-between;
     }
+}
+
+.itemName {
+    @include font-size(16px);
+    @include line-height(26px);
+}
+
+.itemPrice {
+    @include font-size(16px);
+    @include line-height(26px);
+    font-weight: 900;
+    color: $orange;
 }

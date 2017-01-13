@@ -7,8 +7,8 @@ class ProductItem extends Component {
                 <figure>
                     <img src={this.props.product.image} alt={this.props.product.name} />
                     <figcaption>
-                        <span>{this.props.product.name}</span>
-                        <span>{this.props.product.price}</span>
+                        <span className="itemName">{this.props.product.name}</span>
+                        <span className="itemPrice">${this.props.product.price}</span>
                     </figcaption>
                 </figure>
             </li>
