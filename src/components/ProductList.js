@@ -33,24 +33,6 @@ class ProductList extends Component {
                     name: 'Vaso 4',
                     image: 'http://placehold.it/195x250/E8117F/000000',
                     price: '45.00'
-                },
-                {
-                    id: 5,
-                    name: 'Vaso 5',
-                    image: 'http://placehold.it/195x250/E8117F/000000',
-                    price: '55.00'
-                },
-                {
-                    id: 6,
-                    name: 'Vaso 6',
-                    image: 'http://placehold.it/195x250/E8117F/000000',
-                    price: '39.00'
-                },
-                {
-                    id: 7,
-                    name: 'Vaso 7',
-                    image: 'http://placehold.it/195x250/E8117F/000000',
-                    price: '34.00'
                 }
             ]
         };

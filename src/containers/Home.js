@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../styles/containers/Home.scss';
 
 import MainImageSlider from '../components/MainImageSlider';
-import ProductList     from '../components/ProductList';
+import CatalogBlock    from '../components/CatalogBlock';
 import Merchandising   from '../components/Merchandising';
 import MercadoPago     from '../components/MercadoPago';
 import ContactBlock    from '../components/ContactBlock';
@@ -14,7 +14,7 @@ class App extends Component {
           
         <MainImageSlider />
 
-        <ProductList />
+        <CatalogBlock />
 
         <Merchandising />
 
