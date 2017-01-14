@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // container styles
-import '../styles/containers/Home.scss';
+import '../styles/containers/Catalogo.scss';
 // components
 import MainImageSlider from '../components/MainImageSlider';
 import CatalogBlock    from '../components/CatalogBlock';
