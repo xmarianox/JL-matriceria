@@ -16,10 +16,46 @@
 
         figcaption {
             @include size(100%, auto);
+            overflow: hidden;
             padding: 10px;
+            padding-bottom: 50px;
+
+            h3 {
+                font-weight: 900;
+                @include font-size(22px);
+                @include line-height(38px);
+                color: $darkBlue;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: 700;
+                @include font-size(16px);
+                @include line-height(22px);
+                white-space: normal;
+                color: $ultraDarkGray;
+                text-align: center;
+                margin-bottom: 20px;
+
+            }
         }
     }
 
+    .new-product-tag {
+        @include size(90px, 30px);
+        background-color: $white;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto 17px;
+
+        // text
+        @include font-size(18px);
+        @include line-height(30px);
+        text-align: center;
+        color: $black;
+    }
 
     .image-gallery-bullets {
         .image-gallery-bullet {

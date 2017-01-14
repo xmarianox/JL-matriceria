@@ -11,6 +11,12 @@ class MainImageSlider extends Component {
         console.log(`Image loaded ${event.target}`);
     }
 
+    _renderNewLabel(conditional) {
+        if (conditional) {
+            return <span className="new-product-tag">New!</span>;
+        }
+    }
+
     _renderItem(item) {
         // const onImageError = this.props.onImageError || this._handleImageError
         // onError={onImageError.bind(this)}
@@ -25,7 +31,9 @@ class MainImageSlider extends Component {
                 />
                 { item.description &&
                    <figcaption>
-                    <p>{item.description}</p>
+                        {this._renderNewLabel(item.description.new_product)}
+                        <h3>{item.description.title}</h3>
+                        <p>{item.description.label}</p>
                    </figcaption>
                 }
             </figure>
@@ -33,23 +41,7 @@ class MainImageSlider extends Component {
     }
 
     render() {
-        const images = [
-            {
-                original: 'http://lorempixel.com/1000/600/nature/1/',
-                originalAlt: 'Imagen 1',
-                description: 'Imagen 1'
-            },
-            {
-                original: 'http://lorempixel.com/1000/600/nature/2/',
-                originalAlt: 'Imagen 2',
-                description: 'Imagen 3'
-            },
-            {
-                original: 'http://lorempixel.com/1000/600/nature/3/',
-                originalAlt: 'Imagen 3',
-                description: 'Imagen 3'
-            }
-        ]
+        const images = this.props.productImages;
 
         return (
            <div className="MainImageSlider">
