@@ -11,6 +11,27 @@ class MainImageSlider extends Component {
         console.log(`Image loaded ${event.target}`);
     }
 
+    _renderItem(item) {
+        // const onImageError = this.props.onImageError || this._handleImageError
+        // onError={onImageError.bind(this)}
+        return (
+            <figure className='image-gallery-image'>
+                <img
+                    src={item.original}
+                    alt={item.originalAlt}
+                    srcSet={item.srcSet}
+                    sizes={item.sizes}
+                    onLoad={this.props.onImageLoad}
+                />
+                { item.description &&
+                   <figcaption>
+                    <p>{item.description}</p>
+                   </figcaption>
+                }
+            </figure>
+        )
+    }
+
     render() {
         const images = [
             {
@@ -42,6 +63,7 @@ class MainImageSlider extends Component {
                     showNav={false}
                     showBullets={true}
                     onImageLoad={this.handleImageLoad}
+                    renderItem={this._renderItem.bind(this)}
                 />
            </div>
         );
