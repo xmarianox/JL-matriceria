@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import Search from './Search';
 import UserBlock from './UserBlock';
 import CartBlock from './CartBlock';
@@ -46,9 +47,9 @@ class Appbar extends Component {
                         <li>
                             <span>CATÁLOGO</span>
                             <ul>
-                                <li><a href="" title="Vasos">Vasos</a></li>
-                                <li><a href="" title="Servilleteros">Servilleteros</a></li>
-                                <li><a href="" title="Tuppers">Tuppers</a></li>
+                                <li><Link to="/catalogo/vasos" onClick={this._toggleMenu.bind(this)}>Vasos</Link></li>
+                                <li><Link to="/catalogo/servilleteros" onClick={this._toggleMenu.bind(this)}>Servilleteros</Link></li>
+                                <li><Link to="/catalogo/tuppers" onClick={this._toggleMenu.bind(this)}>Tuppers</Link></li>
                             </ul>
                         </li>
                         <li>MERCHANDISING</li>

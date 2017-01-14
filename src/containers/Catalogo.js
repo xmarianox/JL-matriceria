@@ -46,6 +46,9 @@ class Catalogo extends Component {
     }
 
     render() {
+
+        console.log(`Categoria: ${this.props.params.categoria}`);
+
         return (
             <section className="catalogo-container">
                 <MainImageSlider productImages={this.state.mainImages} />
