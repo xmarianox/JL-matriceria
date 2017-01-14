@@ -1,0 +1,33 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- ContactBlock Component
+// =============================================================================
+.CatalogSelector {
+    @include size(100%, auto);
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 6px 16px;
+    //
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: stretch;
+    justify-content: space-between;
+
+    li {
+        flex-basis: calc(33.3% - 8px);
+        padding: 8px;
+        border: 1px solid $black;
+        
+        // texts
+        @include font-size(14px);
+        @include line-height(16px);
+        font-weight: 700;
+        text-align: center;
+
+        &.active {
+            background-color: $lightGrey-3;
+        }
+    }
+}
