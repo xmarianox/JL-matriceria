@@ -67,9 +67,14 @@ textarea {
 
 label {
   font-family: 'Lato', sans-serif;
-  @include font-size(16px);
-  @include line-height(30px);
+  @include font-size(14px);
+  @include line-height(34px);
   color: $ultraDarkGray;
+  
+  @media #{$breakpoint-smartphone-medium} {
+      @include font-size(16px);
+      @include line-height(30px);
+  }
 }
 
 button[disabled=false] {
