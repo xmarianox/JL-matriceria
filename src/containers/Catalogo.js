@@ -2,46 +2,27 @@ import React, {Component} from 'react';
 // container styles
 import '../styles/containers/Catalogo.scss';
 // components
-import MainImageSlider from '../components/MainImageSlider';
+// import MainImageSlider from '../components/MainImageSlider';
+import CatalogPromoBanner from '../components/CatalogPromoBanner';
 import CatalogBlock    from '../components/CatalogBlock';
-import ContactBlock    from '../components/ContactBlock';
 // assets
-import images from '../images/img-slider.jpg';
+import images from '../images/img-promo-vaso.jpg';
+
 
 class Catalogo extends Component {
     constructor() {
         super();
 
         this.state = {
-            mainImages: [
-            {
+            mainImages: {
                 original: images,
-                originalAlt: 'Promo 1',
+                originalAlt: 'img-promo-vaso',
                 description: {
                     new_product: true,
-                    title: 'Jl Matrceria web-22',
+                    title: 'img-promo-vaso',
                     label: 'Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.',
                 }
             },
-            {
-                original: images,
-                originalAlt: 'Promo 2',
-                description: {
-                    new_product: true,
-                    title: 'Jl Matrceria web-23',
-                    label: 'Orbi accumsan ipsum velit.'
-                }
-            },
-            {
-                original: images,
-                originalAlt: 'Promo 3',
-                description: {
-                    new_product: true,
-                    title: 'Jl Matrceria web-24',
-                    label: 'Orbi accumsan ipsum velit.',
-                }
-            }
-            ]
         };
     }
 
@@ -51,11 +32,11 @@ class Catalogo extends Component {
 
         return (
             <section className="catalogo-container">
-                <MainImageSlider productImages={this.state.mainImages} />
+                 <CatalogPromoBanner productImage={this.state.mainImages} />
 
                 <CatalogBlock />
 
-                <ContactBlock />
+                
             </section>
         );
     }

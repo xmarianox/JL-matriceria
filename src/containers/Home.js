@@ -6,7 +6,6 @@ import MainImageSlider from '../components/MainImageSlider';
 import CatalogBlock    from '../components/CatalogBlock';
 import Merchandising   from '../components/Merchandising';
 import MercadoPago     from '../components/MercadoPago';
-import ContactBlock    from '../components/ContactBlock';
 // assets
 import images from '../images/img-slider.jpg';
 
@@ -59,8 +58,6 @@ class App extends Component {
         <Merchandising />
 
         <MercadoPago />
-
-        <ContactBlock />
 
       </section>
     )

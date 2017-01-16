@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 // components
+import {Link} from 'react-router';
 import ImageGallery from 'react-image-gallery';
 import '../../node_modules/react-image-gallery/styles/scss/image-gallery.scss'
 // styles
 import '../styles/components/MainImageSlider.scss';
+
 
 class MainImageSlider extends Component {
 
@@ -34,6 +36,8 @@ class MainImageSlider extends Component {
                         {this._renderNewLabel(item.description.new_product)}
                         <h3>{item.description.title}</h3>
                         <p>{item.description.label}</p>
+
+                        <Link to="/" className="btn btn_action">VER Más</Link>
                    </figcaption>
                 }
             </figure>

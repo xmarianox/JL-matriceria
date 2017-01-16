@@ -1,9 +1,12 @@
 @import "../generycs/variables";
 @import "../generycs/mixins";
 // =============================================================================
-// -- CartBlock Component
+// -- CatalogBlock Component
 // =============================================================================
-.MainImageSlider {
+.CatalogPromoBanner {
+    @include size(100%, auto);
+    overflow: hidden;
+    text-align: center;
 
     .image-gallery-image {
         @include size(100%, auto);
@@ -18,12 +21,6 @@
             @include size(100%, auto);
             overflow: hidden;
             padding: 10px;
-            padding-bottom: 35px;
-            text-align: center;
-
-            @media #{$breakpoint-smartphone-medium} {
-                padding-bottom: 50px;
-            }
 
             h3 {
                 font-weight: 900;
@@ -45,17 +42,11 @@
                 @include line-height(20px);
                 white-space: normal;
                 color: $ultraDarkGray;
-                margin-bottom: 20px;
 
                 @media #{$breakpoint-smartphone-medium} {
                     @include font-size(16px);
                     @include line-height(22px);
                 }
-            }
-
-            .btn_action {
-                display: inline-block;
-                margin: 20px auto 10px;
             }
         }
     }
@@ -74,18 +65,8 @@
         font-weight: 900;
     }
 
-    .image-gallery-bullets {
-        .image-gallery-bullet {
-            @include size(10px, 10px);
-            padding: 0 !important;
-            background: $white;
-            box-shadow: none;
-
-            &.active {
-                background: $darkBlue;
-                border-color: $darkBlue;
-            }
-        }
+    .btn_action {
+        display: inline-block;
+        margin: 20px auto 10px;
     }
-
 }

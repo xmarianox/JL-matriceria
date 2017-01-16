@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 // main theme assets
 import '../styles/main.scss';
 
-import Appbar from '../components/Appbar';
-import Footer from '../components/Footer';
+import Appbar       from '../components/Appbar';
+import ContactBlock from '../components/ContactBlock';
+import Footer       from '../components/Footer';
 
 class App extends Component {
   render() {
@@ -13,6 +14,8 @@ class App extends Component {
 
         {/* Page */}
         {this.props.children}
+
+        <ContactBlock />
 
         <Footer />
       </div>
