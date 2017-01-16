@@ -4,7 +4,7 @@ import '../styles/containers/Catalogo.scss';
 // components
 // import MainImageSlider from '../components/MainImageSlider';
 import CatalogPromoBanner from '../components/CatalogPromoBanner';
-import CatalogBlock    from '../components/CatalogBlock';
+import CatalogCategoryBlock    from '../components/CatalogCategoryBlock';
 // assets
 import images from '../images/img-promo-vaso.jpg';
 
@@ -32,11 +32,10 @@ class Catalogo extends Component {
 
         return (
             <section className="catalogo-container">
-                 <CatalogPromoBanner productImage={this.state.mainImages} />
+                <CatalogPromoBanner productImage={this.state.mainImages} />
 
-                <CatalogBlock />
+                <CatalogCategoryBlock categoryTitle={this.props.params.categoria} />
 
-                
             </section>
         );
     }
