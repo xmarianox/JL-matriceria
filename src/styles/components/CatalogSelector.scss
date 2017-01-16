@@ -21,13 +21,17 @@
         border: 1px solid $black;
         
         // texts
-        @include font-size(14px);
+        @include font-size(12px);
         @include line-height(16px);
         font-weight: 700;
         text-align: center;
 
         &.active {
             background-color: $lightGrey-3;
+        }
+
+        @media #{$breakpoint-smartphone-medium} {
+            @include font-size(14px);
         }
     }
 }
