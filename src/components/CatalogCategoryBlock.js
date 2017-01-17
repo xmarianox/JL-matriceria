@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+import CatalogOrderSelector from './CatalogOrderSelector';
 import ProductList from './ProductList';
+import '../styles/components/CatalogCategoryBlock.scss';
+
 
 class CatalogCategoryBlock extends Component {
     
@@ -52,11 +55,10 @@ class CatalogCategoryBlock extends Component {
 
     render() {
         return (
-            <article className="CatalogBlock">
-                <div>
+            <article className="CatalogCategoryBlock">
+                <div className="CatalogCategoryBlock-header">
                     <h3>{this.props.categoryTitle}</h3>
-                
-                    
+                    <CatalogOrderSelector />    
                 </div>
                 
                 <ProductList productList={this.state.list} />

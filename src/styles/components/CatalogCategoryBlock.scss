@@ -1,0 +1,38 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- CatalogCategoryBlock Component
+// =============================================================================
+.CatalogCategoryBlock {
+    @include size(100%, auto);
+    overflow: hidden;
+    margin: 0 auto 16px;
+
+    &-header {
+        @include size(100%, auto);
+        max-width: calc(100% - 12px);
+        padding: 16px 8px;
+        margin: 0 auto 16px;
+        border-bottom: 1px solid $black;
+        // flex
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // TEXTS
+    h3 {
+        font-weight: 900;
+        @include font-size(20px);
+        @include line-height(36px);
+        color: $black;
+        text-transform: uppercase;
+
+        @media #{$breakpoint-smartphone-medium} {
+            @include font-size(22px);
+            @include line-height(38px);
+        }
+    }
+}

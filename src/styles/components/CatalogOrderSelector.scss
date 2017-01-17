@@ -1,0 +1,20 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- CatalogOrderSelector Component
+// =============================================================================
+.CatalogOrderSelector {
+    @include size(auto, 38px);
+    padding: 0 4px;
+    background-color: $lightGrey-3;
+
+    // texts
+    line-height: 34px;
+
+
+    select {
+        font-family: 'Lato', sans-serif;
+        @include font-size(14px);
+        @include line-height(34px);
+    }
+}

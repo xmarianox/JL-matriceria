@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 // container styles
 import '../styles/containers/Catalogo.scss';
 // components
-// import MainImageSlider from '../components/MainImageSlider';
 import CatalogPromoBanner from '../components/CatalogPromoBanner';
 import CatalogCategoryBlock    from '../components/CatalogCategoryBlock';
 // assets
@@ -27,8 +26,7 @@ class Catalogo extends Component {
     }
 
     render() {
-
-        console.log(`Categoria: ${this.props.params.categoria}`);
+        // console.log(`Categoria: ${this.props.params.categoria}`);
 
         return (
             <section className="catalogo-container">
