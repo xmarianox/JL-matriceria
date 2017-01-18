@@ -1,9 +1,24 @@
 import React, {Component} from 'react';
 import '../styles/components/ProductDetailBlock.scss';
-
+//components
+import ColorSelector from './ColorSelector';
+import SizeSelector from './SizeSelector';
 
 class ProductDetailBlock extends Component {
     render() {
+        const color = [
+            {id: 1, label: 'Rojo', code: '#fa4941'},
+            {id: 2, label: 'Verde', code: '#00f892'},
+            {id: 3, label: 'Azul', code: '#1c2f63'},
+            {id: 4, label: 'Amarillo', code: '#ffa200'}
+        ];
+
+        const size = [
+            {id: 1, label: 'Lorem Ipsum dolor sit.', code: 'S'},
+            {id: 2, label: 'Lorem Ipsum dolor sit.', code: 'M'},
+            {id: 3, label: 'Lorem Ipsum dolor sit.', code: 'L'}
+        ];
+
         return (
             <article className="ProductDetailBlock">
                 <div className="row">
@@ -23,24 +38,11 @@ class ProductDetailBlock extends Component {
                         </div>
 
                         <div className="pd-item-container">
-                            <em>color</em>
-
-                            <ul>
-                                <li>rojo</li>
-                                <li>rojo</li>
-                                <li>rojo</li>
-                                <li>rojo</li>
-                            </ul>
-                        </div>
+                            <ColorSelector colorLists={color} />
+                        </div>                    
 
                         <div className="pd-item-container">
-                            <em>tamaño</em>
-
-                            <ul>
-                                <li>S</li>
-                                <li>M</li>
-                                <li>L</li>
-                            </ul>
+                            <SizeSelector sizeLists={size} />
                         </div>
 
                         <div className="pd-item-container">
