@@ -7,7 +7,7 @@ class ProductDetailBlock extends Component {
         return (
             <article className="ProductDetailBlock">
                 <div className="row">
-                    <img className="pd-image" src="http://placehold.it/414x350/E8117F/000000" alt="image" />
+                    <img className="pd-image" src="http://placehold.it/414x350/E8117F/000000" alt="producto" />
                 </div>{/* row */}
 
                 <div className="row">
