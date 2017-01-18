@@ -21,7 +21,7 @@ class Catalogo extends Component {
                     title: 'img-promo-vaso',
                     label: 'Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.',
                 }
-            },
+            }
         };
     }
 

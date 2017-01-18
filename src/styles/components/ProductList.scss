@@ -27,6 +27,11 @@
         margin-left: auto;
     }
 
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+
     figure {
         @include size(100%, auto);
         overflow: hidden;
