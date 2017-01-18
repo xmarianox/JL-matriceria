@@ -30,9 +30,9 @@ class Appbar extends Component {
                     <div className="AppBar-container">
                         <button onClick={this._toggleMenu.bind(this)} className={ this.state.menu_open ? 'btn-hamburger active' : 'btn-hamburger' } type="button" role="button"><span className="lines"></span></button>
                         
-                        <img src={icMatriceria} alt="JL Matriceria" className="AppBar-logo" />
-                        <img src={icPlastic} alt="JL Plastic" className="AppBar-logo" />
-
+                        <Link to="/"><img src={icMatriceria} alt="JL Matriceria" className="AppBar-logo" /></Link>
+                        <Link to="/"><img src={icPlastic} alt="JL Plastic" className="AppBar-logo" /></Link>
+                    
                         <Search />
                     </div>
                 </header>

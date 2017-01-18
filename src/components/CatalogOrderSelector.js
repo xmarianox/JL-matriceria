@@ -21,7 +21,6 @@ class CatalogOrderSelector extends Component {
     }
 
     _handleChange(item) {
-        // console.log(`event: ${item.label}`);
         this.setState({
             active: item.value
         });

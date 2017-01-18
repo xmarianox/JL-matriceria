@@ -5,8 +5,6 @@
 // =============================================================================
 .CatalogOrderSelector {
     @include size(135px, auto);
-    // padding: 0 4px;
-    // background-color: $lightGrey-3;
 
     .order-selector {
         font-family: 'Lato', sans-serif;
@@ -25,8 +23,6 @@
             border: $lightGrey-3;
         }
     }
-
-    //
 
     .Select-menu-outer {
         border: $lightGrey-3;
