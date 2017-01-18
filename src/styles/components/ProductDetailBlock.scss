@@ -1,0 +1,64 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- ProductDetailBlock Component
+// =============================================================================
+.ProductDetailBlock {
+    @include size(100%, auto);
+    overflow: hidden;
+    // flex
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .row {
+        flex-basis: 100%;
+        margin: auto;
+    }
+}
+
+.pd {
+    &-info-container {
+        @include size(100%, auto);
+        overflow: hidden;
+        padding: 12px;
+    }
+
+    &-item-container {
+        @include size(100%, auto);
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid $black;
+
+        h2 {
+            font-weight: 900;
+            @include font-size(20px);
+            @include line-height(36px);
+            color: $darkBlue;
+            text-transform: uppercase;
+
+            @media #{$breakpoint-smartphone-medium} {
+                @include font-size(22px);
+                @include line-height(38px);
+            }
+        }
+    }
+
+    &-price {
+        @include font-size(20px);
+        @include line-height(36px);
+        font-weight: 700;
+
+        @media #{$breakpoint-smartphone-medium} {
+            @include font-size(22px);
+            @include line-height(38px);
+        }
+    }
+
+    &-image {
+        @include size(100%, auto);
+        display: block;
+    }
+}
