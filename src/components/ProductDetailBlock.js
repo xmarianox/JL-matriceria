@@ -13,7 +13,7 @@ class ProductDetailBlock extends Component {
                 <div className="row">
                     <div className="pd-info-container">
                         <div className="pd-item-container">
-                            <span>NEW!</span>
+                            <span className="pd-new-tag">NEW!</span>
 
                             <h2>Jl Matrceria web-22</h2>
 
