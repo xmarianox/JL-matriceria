@@ -15,8 +15,8 @@ class ProductDetailBlock extends Component {
 
         const size = [
             {id: 1, label: 'Lorem Ipsum dolor sit.', code: 'S'},
-            {id: 2, label: 'Lorem Ipsum dolor sit.', code: 'M'},
-            {id: 3, label: 'Lorem Ipsum dolor sit.', code: 'L'}
+            {id: 2, label: 'Lorem Ipsum sit.', code: 'M'},
+            {id: 3, label: 'Lorem dolor sit.', code: 'L'}
         ];
 
         return (

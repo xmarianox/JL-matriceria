@@ -6,13 +6,15 @@ class SizeSelector extends Component {
         super();
 
         this.state = {
-            selectedItem: ' '
+            selectedItem: ' ',
+            active: 0
         };
     }
 
     _handleClick(item) {
         this.setState({
-            selectedItem: item.label
+            selectedItem: item.label,
+            active: item.id
         });
     }
 
@@ -26,7 +28,7 @@ class SizeSelector extends Component {
                     <ul>
                         { 
                             this.props.sizeLists.map((item) => {
-                                return <li key={item.id} onClick={this._handleClick.bind(this, item)}>{item.code}</li>
+                                return <li key={item.id} onClick={this._handleClick.bind(this, item)} className={this.state.active === item.id ? 'active' : ''}>{item.code}</li>
                             })
                         }
                     </ul>
