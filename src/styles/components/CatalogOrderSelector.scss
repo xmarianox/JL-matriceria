@@ -4,18 +4,32 @@
 // -- CatalogOrderSelector Component
 // =============================================================================
 .CatalogOrderSelector {
-    @include size(auto, 38px);
-    padding: 0 4px;
-    background-color: $lightGrey-3;
+    @include size(135px, auto);
+    // padding: 0 4px;
+    // background-color: $lightGrey-3;
 
-    // texts
-    font-family: 'Lato', sans-serif;
-    @include font-size(14px);
-    @include line-height(34px);
-
-    select {
+    .order-selector {
         font-family: 'Lato', sans-serif;
         @include font-size(14px);
-        @include line-height(34px);
+    }
+
+    .Select-control {
+        background-color: $lightGrey-3;
+        border: $lightGrey-3;
+        @include border-radius(0px);
+    }
+
+    .is-open {
+        & > .Select-control {
+            background-color: $lightGrey-3;
+            border: $lightGrey-3;
+        }
+    }
+
+    //
+
+    .Select-menu-outer {
+        border: $lightGrey-3;
+        @include border-radius(0px);
     }
 }
