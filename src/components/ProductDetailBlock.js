@@ -6,44 +6,36 @@ import SizeSelector from './SizeSelector';
 import QuantitySelector from './QuantitySelector';
 
 class ProductDetailBlock extends Component {
+
+    _showNewTag(product) {
+        return product.new_label ? <span className="pd-new-tag">NEW!</span> : '';
+    }
+
     render() {
-        const color = [
-            {id: 1, label: 'Rojo', code: '#fa4941'},
-            {id: 2, label: 'Verde', code: '#00f892'},
-            {id: 3, label: 'Azul', code: '#1c2f63'},
-            {id: 4, label: 'Amarillo', code: '#ffa200'}
-        ];
-
-        const size = [
-            {id: 1, label: 'Lorem Ipsum dolor sit.', code: 'S'},
-            {id: 2, label: 'Lorem Ipsum sit.', code: 'M'},
-            {id: 3, label: 'Lorem dolor sit.', code: 'L'}
-        ];
-
         return (
             <article className="ProductDetailBlock">
                 <div className="row">
-                    <img className="pd-image" src="http://placehold.it/414x350/E8117F/000000" alt="producto" />
+                    <img className="pd-image" src={this.props.producto.image} alt={this.props.producto.name} />
                 </div>{/* row */}
 
                 <div className="row">
                     <div className="pd-info-container">
                         <div className="pd-item-container">
-                            <span className="pd-new-tag">NEW!</span>
+                            {this._showNewTag(this.props.producto)}
 
-                            <h2>Jl Matrceria web-22</h2>
+                            <h2>{this.props.producto.name}</h2>
 
-                            <span className="pd-price">$150</span>
+                            <span className="pd-price">${this.props.producto.price}</span>
 
-                            <p>Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare.</p>
+                            <p>{this.props.description}</p>
                         </div>
 
                         <div className="pd-item-container">
-                            <ColorSelector colorLists={color} />
+                            <ColorSelector colorLists={this.props.producto.available_color} />
                         </div>                    
 
                         <div className="pd-item-container">
-                            <SizeSelector sizeLists={size} />
+                            <SizeSelector sizeLists={this.props.producto.available_size} />
                         </div>
 
                         <div className="pd-item-container">

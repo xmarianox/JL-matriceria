@@ -5,7 +5,7 @@
 // =============================================================================
 .ProductDetailBlock {
     @include size(100%, auto);
-    overflow: hidden;
+    //overflow: hidden;
     // flex
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
 .pd {
     &-info-container {
         @include size(100%, auto);
-        overflow: hidden;
+        //overflow: hidden;
         padding: 12px;
     }
 

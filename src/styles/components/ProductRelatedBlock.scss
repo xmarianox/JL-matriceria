@@ -1,0 +1,22 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- ProductRelatedBlock Component
+// =============================================================================
+.ProductRelatedBlock {
+    @include size(100%, auto);
+
+    header {
+        @include size(calc(100% - 12px), auto);
+        text-align: center;
+        margin: 0 auto 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $black;
+
+        h3 {
+            @include font-size(21px);
+            @include line-height(36px);
+            font-weight: 700;
+        }
+    }
+}
