@@ -3,6 +3,7 @@ import '../styles/components/ProductDetailBlock.scss';
 //components
 import ColorSelector from './ColorSelector';
 import SizeSelector from './SizeSelector';
+import QuantitySelector from './QuantitySelector';
 
 class ProductDetailBlock extends Component {
     render() {
@@ -46,7 +47,11 @@ class ProductDetailBlock extends Component {
                         </div>
 
                         <div className="pd-item-container">
-                            <em>cantidad</em>
+                            <QuantitySelector />
+                        </div>
+
+                        <div className="pd-item-container">
+                            <button className="btn btn_action">comprar</button>
                         </div>
                     </div>
 
