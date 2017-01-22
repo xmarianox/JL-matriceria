@@ -1,0 +1,89 @@
+@import "../generycs/variables";
+@import "../generycs/mixins";
+// =============================================================================
+// -- ProductsInCartList Component
+// =============================================================================
+.ProductsInCartList {
+    @include size(100%, auto);
+    overflow: hidden;
+    padding: 16px 0;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    margin-bottom: 16px;
+}
+
+.CartListItem {
+    @include size(100%, auto);
+    padding-bottom: 16px;
+    border-bottom: 1px solid $black;
+    margin-bottom: 16px;
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .description-container {
+        @include size(100%, auto);
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        img {
+            @include size(100%, auto);
+            display: block;
+            flex-basis: 45%;
+        }
+
+        .product-info {
+            @include size(100%, auto);
+            overflow: hidden;
+            flex-basis: 55%;
+            padding: 0 8px;
+        }   
+    }
+
+    ul {
+        @include size(100%, auto);
+        overflow: hidden;
+
+        li {
+            @include size(100%, auto);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // texts
+    h3 {
+        font-weight: 900;
+        @include font-size(16px);
+        @include line-height(36px);
+        color: $darkBlue;
+        text-transform: uppercase;
+    }
+
+    p {
+        @include font-size(14px);
+        @include line-height(20px);
+        color: $ultraDarkGray;
+    }
+
+    strong {
+        font-weight: 900;
+        @include font-size(16px);
+        @include line-height(36px);
+    }
+
+    span {
+        font-weight: 700;
+        @include font-size(20px);
+        @include line-height(36px);
+    }
+}

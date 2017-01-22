@@ -7,6 +7,49 @@
   min-height: 100vh;
   overflow: hidden;
   padding-top: 76px;
+
+  article {
+    padding: 8px;
+  }
+
+  .subtotal-box {
+    @include size(100%, auto);
+    padding: 16px;
+    border: 1px solid $black;
+
+    &-row {
+      @include size(100%, auto);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+
+      &.total-item {
+        color: $darkBlue;
+        
+        strong,
+        span {
+          font-weight: 900;
+          @include font-size(20px);
+        }
+      }
+    }
+
+    strong {
+      font-weight: 900;
+      @include font-size(18px);
+      @include line-height(36px);
+    }
+
+    span {
+      font-weight: 700;
+      @include font-size(18px);
+      @include line-height(36px);
+    }
+  }
+
   // responsive
   // @media #{$breakpoint-smartphone-medium} {}
   // @media #{$breakpoint-smartphone-big-landscape} {}
