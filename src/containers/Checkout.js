@@ -70,6 +70,8 @@ class Checkout extends Component {
                             <strong>TOTAL</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
                         </div>
                     </div>
+
+                    <button className="btn btn_action">COMPRAR</button>
                     
                 </article>
 
