@@ -21,10 +21,20 @@
     margin-left: 0;
     overflow: hidden;
 
+    @media #{$breakpoint-tablet-land} {
+        flex-basis: 24%;
+        margin-left: auto;
+    }
+
     //&:last-child {}
     &:nth-child(2n) {
         margin-right: 0;
         margin-left: auto;
+
+        @media #{$breakpoint-tablet-land} {
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 
     a {

@@ -48,15 +48,19 @@
   // responsive
   @media #{$breakpoint-tablet-land} {
     &-container {
-      padding: 20px 24px;
+      padding: 10px 24px;
     }
 
     &-logo {
-      @include size(196px, 34px);
+      @include size(70px, auto);
     }
 
     .btn-hamburger {
-      left: 24px;
+      display: none;
+    }
+
+    .Search {
+      display: none;
     }
 
     p {

@@ -9,6 +9,10 @@
         @include size(100%, auto);
         background-color: $lightGrey-3;
 
+        @media #{$breakpoint-tablet-land} {
+            position: relative;        
+        }
+
         img {
             @include size(100%, auto);
             display: block;
@@ -23,6 +27,17 @@
 
             @media #{$breakpoint-smartphone-medium} {
                 padding-bottom: 50px;
+            }
+
+            @media #{$breakpoint-tablet-land} {
+                @include size(40%, 100%);
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 24px;
+                padding-bottom: 24px;
+                text-align: left;
             }
 
             h3 {
@@ -72,6 +87,11 @@
         text-align: center;
         color: $black;
         font-weight: 900;
+
+        @media #{$breakpoint-tablet-land} {
+            margin-top: 35%;
+            margin-left: 0;
+        }
     }
 
     .image-gallery-bullets {

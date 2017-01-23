@@ -7,7 +7,8 @@ import CatalogBlock    from '../components/CatalogBlock';
 import Merchandising   from '../components/Merchandising';
 import MercadoPago     from '../components/MercadoPago';
 // assets
-import images from '../images/img-slider.jpg';
+import imageDesktop from '../images/img-slider-original.jpg';
+import imagesMobile from '../images/img-slider.jpg';
 
 class App extends Component {
 
@@ -17,7 +18,8 @@ class App extends Component {
     this.state = {
       mainImages: [
         {
-            original: images,
+            original: imagesMobile,
+            srcSet: imageDesktop,
             originalAlt: 'Promo 1',
             description: {
               new_product: true,
@@ -26,7 +28,8 @@ class App extends Component {
             }
         },
         {
-            original: images,
+            original: imagesMobile,
+            srcSet: imageDesktop,
             originalAlt: 'Promo 2',
             description: {
               new_product: true,
@@ -35,7 +38,8 @@ class App extends Component {
             }
         },
         {
-            original: images,
+            original: imagesMobile,
+            srcSet: imageDesktop,
             originalAlt: 'Promo 3',
             description: {
               new_product: true,

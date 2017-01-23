@@ -21,6 +21,10 @@
         &:first-child {
             padding: 16px;
         }
+
+        @media #{$breakpoint-tablet-land} {
+            flex-basis: 50%;
+        }
     }
 
     // TEXTS
@@ -58,5 +62,9 @@
         @include size(100%, auto);
         min-height: 250px;
         border: none;
+
+        @media #{$breakpoint-tablet-land} {
+            min-height: 489px;
+        }
     }
 }

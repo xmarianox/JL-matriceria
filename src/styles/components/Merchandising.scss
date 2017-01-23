@@ -22,6 +22,17 @@
         &:last-child {
             padding: 16px;
         }
+
+        @media #{$breakpoint-tablet-land} {
+            flex-basis: 50%;
+            height: 350px;
+
+            //
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            justify-content: center;
+        }
     }
 
     img {

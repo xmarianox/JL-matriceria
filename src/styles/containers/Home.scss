@@ -10,7 +10,9 @@
   // responsive
   // @media #{$breakpoint-smartphone-medium} {}
   // @media #{$breakpoint-smartphone-big-landscape} {}
-  // @media #{$breakpoint-tablet-land} {}
+  @media #{$breakpoint-tablet-land} {
+    padding-top: 90px;
+  }
   // @media #{$breakpoint-laptop-small} {}
   // @media #{$breakpoint-laptop-big} {}
   // @media #{$breakpoint-desktop-medium} {}

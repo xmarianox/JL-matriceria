@@ -15,6 +15,10 @@
     align-self: stretch;
     justify-content: space-between;
 
+    @media #{$breakpoint-tablet-land} {
+        justify-content: center;
+    }
+
     li {
         flex-basis: calc(33.3% - 8px);
         padding: 8px;
@@ -33,5 +37,10 @@
         @media #{$breakpoint-smartphone-medium} {
             @include font-size(14px);
         }
+
+         @media #{$breakpoint-tablet-land} {
+             flex-basis: calc(20%);
+             margin: 0 15px;
+         }
     }
 }
