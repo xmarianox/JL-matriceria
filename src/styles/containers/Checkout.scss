@@ -15,6 +15,7 @@
   header {
     @include size(100%, auto);
     padding: 16px 0;
+    border-bottom: 1px solid $black;
 
     h2 {
         font-weight: 900;
@@ -66,6 +67,53 @@
       @include font-size(18px);
       @include line-height(36px);
     }
+  }
+
+  .step {
+    @include size(100%, auto);
+    padding: 16px 0;
+
+
+    &-container {
+      text-align: center;
+      margin-bottom: 16px;
+
+      h3 {
+        @include size(100%, auto);
+        background-color: $black;
+        @include font-size(16px);
+        @include line-height(36px);
+        color: $white;
+        
+        margin-bottom: 24px;
+      }
+
+      p {
+        @include font-size(16px);
+        @include line-height(20px);
+      }
+    }
+  }
+
+
+  .resume-box {
+    h4 {
+      @include font-size(16px);
+      @include line-height(23px);
+      font-weight: bold;
+    }
+
+    p {
+      @include font-size(16px);
+      @include line-height(23px);
+    }
+
+    .shipping-data {
+      li {
+        @include font-size(16px);
+        @include line-height(23px);
+      }
+    }    
   }
 
   // responsive

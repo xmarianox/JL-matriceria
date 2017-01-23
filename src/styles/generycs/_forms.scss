@@ -18,6 +18,19 @@ form {
   .btn_action {
     margin: 0 auto;
   }
+
+  &.form-checkout {
+    
+    label {
+      color: $black;
+    }
+    input {
+      border: 1px solid $black;
+      -webkit-appearance: inherit;
+      color: $black;
+    }
+  }
+
 }
 
 // =============================================================================
