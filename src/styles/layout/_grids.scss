@@ -4,6 +4,11 @@
 .container {
   @include size(calc(100% - 12px), auto);
   margin: 0 auto;
+  padding-top: 76px;
+  // responsive
+  @media #{$breakpoint-tablet-land} {
+    padding-top: 90px;
+  }
 
   &:after {
     @extend %clearfix;
