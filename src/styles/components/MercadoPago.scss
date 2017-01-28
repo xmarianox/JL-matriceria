@@ -15,7 +15,10 @@
     align-items: center;
     justify-content: space-between;
 
-
+    @media #{$breakpoint-laptop-small} {
+        margin-bottom: 50px;
+    }
+    
     // TEXTS
     h3 {
         font-weight: 700;

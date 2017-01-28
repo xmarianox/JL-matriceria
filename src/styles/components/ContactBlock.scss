@@ -15,6 +15,10 @@
     align-self: stretch;
     justify-content: center;
 
+    @media #{$breakpoint-laptop-small} {
+        margin-bottom: 50px;
+    }
+
     &-item {
         flex-basis: 100%;
 
