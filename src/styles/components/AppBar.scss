@@ -45,6 +45,12 @@
     top: 22px;
   }
 
+  .Search {
+    position: absolute;
+    right: 16px;
+    top: 22px;
+  }
+
   // responsive
   @media #{$breakpoint-tablet-land} {
     &-container {

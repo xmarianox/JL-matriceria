@@ -4,9 +4,28 @@
 // -- Search Component
 // =============================================================================
 .Search {
-    position: absolute;
-    right: 16px;
-    top: 22px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+
+    &.open {
+        background-color: $lightGrey-3;
+        padding: 0 6px;
+        @include border-radius(25px);
+        overflow: hidden;
+
+        .Search-btn {
+            background-color: $lightGrey-3;
+            @include size(20px, 20px);
+        }
+
+        .Search-bar {
+            @include size(200px, 29px);
+        }
+    }
 
     &-btn {
         @include size(29px, 29px);
@@ -14,4 +33,35 @@
         background-color: $white;
         border: none;
     }
+
+    &-bar {
+        @include size(0px, 29px);
+        overflow: hidden;
+
+        input {
+            @include size(100%, 29px);
+            border-color: $lightGrey-3;
+            background-color: $lightGrey-3;
+            padding: 0 8px;
+            color: $black;
+        }
+    }
+
+    @media #{$breakpoint-tablet-land} {
+        @include size(100%, auto);
+        background-color: $lightGrey-3;
+        padding: 0 6px;
+        @include border-radius(25px);
+        overflow: hidden;
+
+        .Search-btn {
+            background-color: $lightGrey-3;
+            @include size(20px, 20px);
+        }
+
+        .Search-bar {
+            @include size(calc(100% - (20px -12px)), 29px);
+        }
+    }
+
 }

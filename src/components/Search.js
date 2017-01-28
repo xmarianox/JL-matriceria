@@ -16,17 +16,18 @@ class Search extends Component {
 
     _toggleSearchBar() {
         this.setState({ search_open: !this.state.search_open });
-        //console.log('Open Search Bar');
     }
 
     render() {
         return (
-            <div className="Search">
+            <div className={this.state.search_open ? 'Search open' : 'Search'}>
                 <button className="Search-btn" onClick={this._toggleSearchBar.bind(this)}>
                     <img src={icSearch} alt="Search" />
                 </button>
 
-
+                <div className="Search-bar">
+                    <input type="text" name="" id="" />
+                </div>                
             </div>
         );
     }

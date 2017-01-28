@@ -19,7 +19,7 @@
 
     ul {
         @include size(100%, auto);
-        padding: 16px;
+        padding: 16px 0;
     }
 
     li {
