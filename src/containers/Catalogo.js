@@ -5,8 +5,8 @@ import '../styles/containers/Catalogo.scss';
 import CatalogPromoBanner from '../components/CatalogPromoBanner';
 import CatalogCategoryBlock    from '../components/CatalogCategoryBlock';
 // assets
+import imagesOriginal from '../images/img-promo-vaso-original.jpg';
 import images from '../images/img-promo-vaso.jpg';
-
 
 class Catalogo extends Component {
     constructor() {
@@ -15,6 +15,7 @@ class Catalogo extends Component {
         this.state = {
             mainImages: {
                 original: images,
+                originalDesktop: imagesOriginal,
                 originalAlt: 'img-promo-vaso',
                 description: {
                     new_product: true,

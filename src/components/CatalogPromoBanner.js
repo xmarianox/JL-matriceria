@@ -14,10 +14,11 @@ class CatalogPromoBanner extends Component {
     _renderItem(item) {
         return (
             <figure className='image-gallery-image'>
-                <img
-                    src={item.original}
-                    alt={item.originalAlt}
-                />
+                <picture>
+                    <source srcSet={item.originalDesktop} media="(min-width: 40em)" />
+                    <img src={item.original} alt={item.originalAlt} />
+                </picture>
+
                 { item.description &&
                    <figcaption>
                         {this._renderNewLabel(item.description.new_product)}
