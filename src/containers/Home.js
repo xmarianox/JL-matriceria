@@ -86,6 +86,12 @@ class App extends Component {
               name: 'Vaso 4',
               image: 'http://placehold.it/195x250/E8117F/000000',
               price: '45.00'
+          },
+          {
+              id: 5,
+              name: 'Vaso 5',
+              image: 'http://placehold.it/195x250/E8117F/000000',
+              price: '45.00'
           }
       ]
     };

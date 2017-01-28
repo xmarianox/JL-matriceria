@@ -21,9 +21,22 @@
     margin-left: 0;
     overflow: hidden;
 
+    // mostramos cuatro items
+    &:last-child {
+        display: none;
+    }
+
     @media #{$breakpoint-tablet-land} {
         flex-basis: 24%;
         margin-left: auto;
+    }
+
+    @media #{$breakpoint-laptop-small} {
+        flex-basis: 19%;
+
+        &:last-child {
+            display: block;
+        }
     }
 
     //&:last-child {}

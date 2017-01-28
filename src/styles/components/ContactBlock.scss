@@ -25,6 +25,12 @@
         @media #{$breakpoint-tablet-land} {
             flex-basis: 50%;
         }
+
+        @media #{$breakpoint-laptop-small} {
+            &:first-child {
+                padding: 30px 55px;
+            }
+        }
     }
 
     // TEXTS
@@ -65,6 +71,9 @@
 
         @media #{$breakpoint-tablet-land} {
             min-height: 489px;
+        }
+        @media #{$breakpoint-laptop-small} {
+            min-height: 517px;
         }
     }
 }
