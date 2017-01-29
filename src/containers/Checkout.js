@@ -39,6 +39,7 @@ class Checkout extends Component {
                     quantity: 3
                 }
             ],
+            resumeVisible: true,
             activeStep: 1,
             steps: [
                 { id: 1, label: '1. Datos de facturación' },
@@ -61,7 +62,7 @@ class Checkout extends Component {
 
     _goToNextStep(event) {
         event.preventDefault();
-        
+
         this.setState({
             activeStep: this.state.activeStep + 1
         });
@@ -187,51 +188,66 @@ class Checkout extends Component {
         }
     }
 
+    _goToStepsView(event) {
+        event.preventDefault();
+        this.setState({
+            resumeVisible: !this.state.resumeVisible
+        });
+    }
+
+    _renderViews(stateOfViews) {
+        const resumeView = (
+            <article>
+                <header>
+                    <h2>MI COMPRA</h2>
+                </header>
+
+                <ProductsInCartList data={this.state.items} />
+
+                <div className="subtotal-box">
+                    <div className="subtotal-box-row">
+                        <strong>SubTotal</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
+                    </div>
+                    <div className="subtotal-box-row total-item">
+                        <strong>TOTAL</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
+                    </div>
+                </div>
+
+                <button className="btn btn_action" onClick={this._goToStepsView.bind(this)}>COMPRAR</button>
+                
+            </article>
+        );
+
+        const stepsView = (
+            <article >
+                <header>
+                    <h2>FINALIZAR MI COMPRA</h2>
+                </header>
+
+                <ul className="step-indicator">
+                    {
+                        this.state.steps.map((step) => {
+                            return (
+                                <li  key={step.id} className={this.state.activeStep === step.id ? 'active' : ''}>
+                                    <span>{step.label}</span>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>           
+
+                {this._renderCheckoutStep(this.state.activeStep)}
+
+            </article>
+        );
+
+        return stateOfViews === true ? resumeView : stepsView;
+    }
+
     render() {
         return (
             <section className="checkout-container">
-               
-                <article style={{ display: 'none' }}>
-                    <header>
-                        <h2>MI COMPRA</h2>
-                    </header>
-
-                    <ProductsInCartList data={this.state.items} />
-
-                    <div className="subtotal-box">
-                        <div className="subtotal-box-row">
-                            <strong>SubTotal</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
-                        </div>
-                        <div className="subtotal-box-row total-item">
-                            <strong>TOTAL</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
-                        </div>
-                    </div>
-
-                    <button className="btn btn_action">COMPRAR</button>
-                    
-                </article>
-
-                <article >
-                    <header>
-                        <h2>FINALIZAR MI COMPRA</h2>
-                    </header>
-
-                    <ul className="step-indicator">
-                        {
-                            this.state.steps.map((step) => {
-                                return (
-                                    <li  key={step.id} className={this.state.activeStep === step.id ? 'active' : ''}>
-                                        <span>{step.label}</span>
-                                    </li>
-                                );
-                            })
-                        }
-                    </ul>           
-
-                    {this._renderCheckoutStep(this.state.activeStep)}
-
-                </article>
-
+               { this._renderViews(this.state.resumeVisible) }
             </section>
         );
     }
