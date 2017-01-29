@@ -23,10 +23,15 @@
     }
 
     li {
-        @include font-size(19px);
-        @include line-height(37px);
+        @include font-size(15px);
+        @include line-height(32px);
         font-weight: 900;
         color: $darkBlue;
+
+        @media #{$breakpoint-laptop-small} {
+            @include font-size(19px);
+            @include line-height(37px);
+        }
 
         ul {
             padding: 0;
