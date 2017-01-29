@@ -14,7 +14,10 @@
     align-items: center;
     justify-content: space-between;
 
-
+    @media #{$breakpoint-tablet-land} {
+        padding: 0;
+    }
+    
     a {
         @include font-size(15px);
         @include line-height(22px);

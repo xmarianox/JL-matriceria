@@ -34,6 +34,11 @@ class Appbar extends Component {
                         <Link to="/"><img src={icPlastic} alt="JL Plastic" className="AppBar-logo" /></Link>
                     
                         <Search />
+
+                        <div className="desktop-user-container">
+                            <UserBlock userName="Mariano" />
+                            <CartBlock itemsQuantity={1} cartAmount={45.56} />
+                        </div>
                     </div>
                 </header>
 
