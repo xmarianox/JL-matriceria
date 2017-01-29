@@ -23,6 +23,15 @@ form {
     
     label {
       color: $black;
+
+      @media #{$breakpoint-tablet-land} {
+        @include font-size(13px);
+        @include line-height(23px);
+      }
+
+      @media #{$breakpoint-laptop-small} {
+        @include font-size(15px);
+      }
     }
     input {
       border: 1px solid $black;

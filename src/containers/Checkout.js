@@ -59,6 +59,14 @@ class Checkout extends Component {
         return a.reduce((a, b) => a + b, 0);
     }
 
+    _goToNextStep(event) {
+        event.preventDefault();
+        
+        this.setState({
+            activeStep: this.state.activeStep + 1
+        });
+    }
+
     _renderCheckoutStep(step) {
         switch(step) {
             case 1:
@@ -90,7 +98,7 @@ class Checkout extends Component {
                             </div>
 
                             <div className="form-control">
-                                <button className="btn btn_action">continuar</button>
+                                <button className="btn btn_action" onClick={this._goToNextStep.bind(this)}>continuar</button>
                             </div>
                         </form>
                     </div>
@@ -144,7 +152,7 @@ class Checkout extends Component {
                             </div>
 
                             <div className="form-control">
-                                <button className="btn btn_action">continuar</button>
+                                <button className="btn btn_action" onClick={this._goToNextStep.bind(this)}>continuar</button>
                             </div>
                         </form>
                     </div>
