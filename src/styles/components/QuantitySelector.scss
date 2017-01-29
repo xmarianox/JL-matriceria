@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: space-between;
 
+    @media #{$breakpoint-tablet-land} {
+        padding: 16px 0;
+    }
+
     em {
         @include font-size(16px);
         @include line-height(36px);
@@ -19,11 +23,25 @@
         margin: auto;
         margin-left: 0px;
         margin-top: 0px;
+        
+        @media #{$breakpoint-tablet-land} {
+            @include font-size(19px);
+            @include line-height(37px);
+        }
+
+        @media #{$breakpoint-laptop-small} {
+            width: 80px;
+            margin-right: 40px;
+        }
     }
 
     .Select {
         @include size(180px, auto);
         margin: auto;
+
+        @media #{$breakpoint-tablet-land} {
+            margin-left: 0px;
+        }
     }
 
 }

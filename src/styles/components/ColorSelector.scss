@@ -19,10 +19,24 @@
         margin: auto;
         margin-left: 0px;
         margin-top: 0px;
+
+        @media #{$breakpoint-tablet-land} {
+            @include font-size(19px);
+            @include line-height(37px);
+        }
+
+        @media #{$breakpoint-laptop-small} {
+            width: 80px;
+            margin-right: 40px;
+        }
     }
 
     .color-container {
         margin: auto;
+
+        @media #{$breakpoint-tablet-land} {
+            margin-left: 0px;
+        }
     }
 
     ul {
@@ -32,6 +46,10 @@
         align-items: center;
         justify-content: space-between;
 
+        @media #{$breakpoint-laptop-small} {
+            height: 37px;
+        }
+
         li {
             @include size(25px, 25px);
             @include border-radius(50%);
@@ -40,6 +58,10 @@
             margin: auto 10px;
             display: block;
             cursor: pointer;
+
+            @media #{$breakpoint-laptop-small} {
+                @include size(12px, 12px);
+            }
         }
     }
 

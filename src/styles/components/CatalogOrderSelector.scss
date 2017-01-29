@@ -15,6 +15,11 @@
         background-color: $lightGrey-3;
         border: $lightGrey-3;
         @include border-radius(0px);
+
+
+        @media #{$breakpoint-tablet-land} {
+            height: 50px;
+        }
     }
 
     .is-open {
@@ -27,5 +32,9 @@
     .Select-menu-outer {
         border: $lightGrey-3;
         @include border-radius(0px);
+    }
+
+    .Select-placeholder, .Select--single > .Select-control .Select-value {
+        @include line-height(48px);
     }
 }

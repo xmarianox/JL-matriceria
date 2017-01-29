@@ -8,6 +8,10 @@
     overflow: hidden;
     margin: 0 auto 16px;
 
+    @media #{$breakpoint-tablet-land} {
+        margin-bottom: 50px;
+    }
+
     &-header {
         @include size(100%, auto);
         max-width: calc(100% - 12px);
@@ -20,6 +24,12 @@
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
+
+        @media #{$breakpoint-tablet-land} {
+            padding-right: 0;
+            padding-bottom: 0;
+            margin-bottom: 50px;
+        }
     }
 
     // TEXTS
@@ -33,6 +43,11 @@
         @media #{$breakpoint-smartphone-medium} {
             @include font-size(22px);
             @include line-height(38px);
+        }
+
+        @media #{$breakpoint-tablet-land} {
+            @include font-size(27px);
+            @include line-height(50px);
         }
     }
 }

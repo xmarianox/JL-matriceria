@@ -27,7 +27,7 @@ class ProductDetailBlock extends Component {
 
                             <span className="pd-price">${this.props.producto.price}</span>
 
-                            <p>{this.props.description}</p>
+                            <p>{this.props.producto.description}</p>
                         </div>
 
                         <div className="pd-item-container">

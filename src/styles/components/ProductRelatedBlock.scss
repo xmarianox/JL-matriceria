@@ -6,6 +6,10 @@
 .ProductRelatedBlock {
     @include size(100%, auto);
 
+    @media #{$breakpoint-tablet-land} {
+        margin-bottom: 50px;
+    }
+
     header {
         @include size(calc(100% - 12px), auto);
         text-align: center;
@@ -13,10 +17,21 @@
         padding-bottom: 10px;
         border-bottom: 1px solid $black;
 
+        @media #{$breakpoint-tablet-land} {
+            @include size(100%, auto);
+            text-align: left;
+            margin-bottom: 22px;
+        }
+
         h3 {
             @include font-size(21px);
             @include line-height(36px);
             font-weight: 700;
+
+            @media #{$breakpoint-tablet-land} {
+                @include font-size(27px);
+                @include line-height(37px);
+            }
         }
     }
 }

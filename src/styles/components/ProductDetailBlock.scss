@@ -13,17 +13,30 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    @media #{$breakpoint-tablet-land} {
+        margin-bottom: 50px;
+    }
+
     .row {
         flex-basis: 100%;
         margin: auto;
+
+        @media #{$breakpoint-tablet-land} {
+            flex-basis: 50%;
+            margin: 0 auto;
+        }
     }
 }
 
 .pd {
     &-info-container {
         @include size(100%, auto);
-        //overflow: hidden;
         padding: 12px;
+
+        @media #{$breakpoint-tablet-land} {
+            max-width: 90%;
+            float: right;
+        }
     }
 
     &-item-container {
@@ -34,6 +47,12 @@
 
         &:last-child {
             border-bottom: none;
+        }
+
+        @media #{$breakpoint-tablet-land} {
+            &:nth-child(4) {
+                border-bottom: none;
+            }
         }
 
         h2 {
@@ -47,6 +66,11 @@
                 @include font-size(22px);
                 @include line-height(38px);
             }
+
+            @media #{$breakpoint-tablet-land} {
+                @include font-size(27px);
+                margin-bottom: 10px;
+            }
         }
 
         p {
@@ -57,6 +81,11 @@
             @media #{$breakpoint-smartphone-medium} {
                 @include font-size(16px);
                 @include line-height(22px);
+            }
+
+            @media #{$breakpoint-tablet-land} {
+                @include line-height(23px);
+                margin-bottom: 10px;
             }
         }
 
@@ -76,6 +105,12 @@
             @include font-size(22px);
             @include line-height(38px);
         }
+
+        @media #{$breakpoint-tablet-land} {
+            @include font-size(24px);
+            display: inline-block;
+            margin-bottom: 10px;
+        }
     }
 
     &-new-tag {
@@ -90,10 +125,21 @@
         text-align: center;
         color: $white;
         font-weight: 900;
+
+        @media #{$breakpoint-tablet-land} {
+            @include size(98px, 35px);
+            margin-bottom: 30px;
+
+             @include line-height(35px);
+        }
     }
 
     &-image {
         @include size(100%, auto);
         display: block;
+
+        @media #{$breakpoint-tablet-land} {
+            min-height: 640px;
+        }
     }
 }

@@ -48,6 +48,41 @@ class CatalogCategoryBlock extends Component {
                     name: 'Vaso 4',
                     image: 'http://placehold.it/195x250/E8117F/000000',
                     price: '45.00'
+                },
+                {
+                    id: 5,
+                    name: 'Vaso',
+                    image: 'http://placehold.it/195x250/E8117F/000000',
+                    price: '35.00'
+                },
+                {
+                    id: 6,
+                    name: 'Vaso 2',
+                    image: 'http://placehold.it/195x250/E8117F/000000',
+                    price: '39.00'
+                },
+                {
+                    id: 7,
+                    name: 'Vaso 3',
+                    image: 'http://placehold.it/195x250/E8117F/000000',
+                    price: '32.00'
+                },
+                {
+                    id: 8,
+                    name: 'Vaso 4',
+                    image: 'http://placehold.it/195x250/E8117F/000000',
+                    price: '45.00'
+                },{
+                    id: 9,
+                    name: 'Vaso',
+                    image: 'http://placehold.it/195x250/E8117F/000000',
+                    price: '35.00'
+                },
+                {
+                    id: 10,
+                    name: 'Vaso 2',
+                    image: 'http://placehold.it/195x250/E8117F/000000',
+                    price: '39.00'
                 }
             ]
         };
