@@ -16,6 +16,7 @@ class Checkout extends Component {
                 {
                     id: 1,
                     image: 'http://placehold.it/195x250/E8117F/000000',
+                    imageDesktop: 'http://placehold.it/220x110/E8117F/000000',
                     name: 'Jl Matrceria web-37',
                     description: 'Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare. um velit. Nam nec.',
                     price: 157,
@@ -24,6 +25,7 @@ class Checkout extends Component {
                 {
                     id: 2,
                     image: 'http://placehold.it/195x250/E8117F/000000',
+                    imageDesktop: 'http://placehold.it/220x110/E8117F/000000',
                     name: 'Jl Matrceria web-37',
                     description: 'Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare. um velit. Nam nec.',
                     price: 200,
@@ -32,6 +34,7 @@ class Checkout extends Component {
                 {
                     id: 3,
                     image: 'http://placehold.it/195x250/E8117F/000000',
+                    imageDesktop: 'http://placehold.it/220x110/E8117F/000000',
                     name: 'Jl Matrceria web-37',
                     description: 'Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare. um velit. Nam nec.',
                     price: 145,
@@ -55,7 +58,7 @@ class Checkout extends Component {
         return (
             <section className="checkout-container">
                
-                <article style={{ display: 'none' }}>
+                <article>
                     <header>
                         <h2>MI COMPRA</h2>
                     </header>
@@ -174,7 +177,7 @@ class Checkout extends Component {
                 </article>
 
 
-                <article>
+                <article style={{ display: 'none' }}>
                     <header>
                         <h2>FINALIZAR MI COMPRA</h2>
                     </header>

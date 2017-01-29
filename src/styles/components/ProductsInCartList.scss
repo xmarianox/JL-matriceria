@@ -17,6 +17,14 @@
     border-bottom: 1px solid $black;
     margin-bottom: 16px;
 
+    @media #{$breakpoint-tablet-land} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
     &:last-child {
         border-bottom: none;
         margin-bottom: 0;
@@ -31,10 +39,19 @@
         align-items: stretch;
         justify-content: space-between;
 
+        @media #{$breakpoint-tablet-land} {
+            padding-bottom: 0;
+        }
+
         img {
             @include size(100%, auto);
             display: block;
             flex-basis: 45%;
+
+            @media #{$breakpoint-tablet-land} {
+                flex-basis: auto;
+                max-width: 220px;
+            }
         }
 
         .product-info {
@@ -42,12 +59,26 @@
             overflow: hidden;
             flex-basis: 55%;
             padding: 0 8px;
+
+            @media #{$breakpoint-tablet-land} {
+                flex-basis: auto;
+                padding: 0 16px;
+            }
         }   
     }
 
     ul {
         @include size(100%, auto);
         overflow: hidden;
+
+        @media #{$breakpoint-tablet-land} {
+            @include size(45%, auto);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         li {
             @include size(100%, auto);
@@ -72,17 +103,34 @@
         @include font-size(14px);
         @include line-height(20px);
         color: $ultraDarkGray;
+
+        @media #{$breakpoint-tablet-land} {
+            max-width: 350px;
+
+            @include font-size(16px);
+            @include line-height(23px);
+            text-align: justify;
+        }
     }
 
     strong {
         font-weight: 900;
         @include font-size(16px);
         @include line-height(36px);
+
+        @media #{$breakpoint-tablet-land} {
+            display: none;
+        }
     }
 
     span {
         font-weight: 700;
         @include font-size(20px);
         @include line-height(36px);
+
+        @media #{$breakpoint-tablet-land} {
+            margin: auto;
+            margin-right: 0;
+        }
     }
 }

@@ -13,7 +13,10 @@ class ProductsInCartList extends Component {
                         return (
                             <li className="CartListItem" key={item.id}>
                                 <div className="description-container">
-                                    <img src={item.image} alt={item.name} />
+                                    <picture>
+                                        <source srcSet={item.imageDesktop} media="(min-width: 40em)" />
+                                        <img src={item.image} alt={item.name} />
+                                    </picture>
 
                                     <div className="product-info">
                                         <h3>{item.name}</h3>
