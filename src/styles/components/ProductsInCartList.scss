@@ -3,6 +3,43 @@
 // =============================================================================
 // -- ProductsInCartList Component
 // =============================================================================
+.ProductsInCart {
+    @include size(100%, auto);
+}
+
+.ProductsInCartListHeader {
+    display: none;
+
+    @media #{$breakpoint-tablet-land} {
+        @include size(100%, auto);
+        padding-bottom: 16px;
+        border-bottom: 1px solid $black;
+        // flex
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: space-between;   
+    
+        li {
+            font-weight: 700;
+            @include font-size(20px);
+            @include line-height(37px);
+            text-align: right;
+            margin: auto;
+            margin-right: 0;
+            margin-left: 25px;
+
+            &:first-child {
+                width: 60%;
+                margin-right: auto;
+                margin-left: 0;
+                text-align: left;
+            }
+        }
+    }
+}
+
 .ProductsInCartList {
     @include size(100%, auto);
     overflow: hidden;

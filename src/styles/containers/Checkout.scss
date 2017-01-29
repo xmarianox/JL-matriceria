@@ -7,14 +7,27 @@
   min-height: 100vh;
   overflow: hidden;
 
+  @media #{$breakpoint-tablet-land} {
+    min-height: auto;
+  }
+
   article {
     padding: 0 8px;
+
+    @media #{$breakpoint-tablet-land} {
+      border-bottom: 1px solid $black;
+      margin-bottom: 50px;
+    }
   }
 
   header {
     @include size(100%, auto);
     padding: 16px 0;
     border-bottom: 1px solid $black;
+
+    @media #{$breakpoint-tablet-land} {
+      border-bottom: none;
+    }
 
     h2 {
         font-weight: 900;
@@ -39,6 +52,17 @@
     padding: 16px;
     border: 1px solid $black;
 
+    @media #{$breakpoint-tablet-land} {
+      border: none;
+      padding: 16px 0;
+      
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
     &-row {
       @include size(100%, auto);
       display: flex;
@@ -47,6 +71,9 @@
       align-items: center;
       justify-content: space-between;
 
+      @media #{$breakpoint-tablet-land} {
+        max-width: 250px;
+      }
 
       &.total-item {
         color: $darkBlue;
@@ -116,6 +143,13 @@
         @include line-height(23px);
       }
     }    
+  }
+
+  
+  @media #{$breakpoint-tablet-land} {
+    .btn_action {
+      margin-right: 0px;
+    }
   }
 
   // responsive
