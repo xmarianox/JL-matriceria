@@ -9,9 +9,7 @@ class Checkout extends Component {
         super();
 
         this.state = {
-
             subtotal: 0,
-
             items: [
                 {
                     id: 1,
@@ -40,7 +38,14 @@ class Checkout extends Component {
                     price: 145,
                     quantity: 3
                 }
+            ],
+            activeStep: 1,
+            steps: [
+                { id: 1, label: '1. Datos de facturación' },
+                { id: 2, label: '2. Datos de envío' },
+                { id: 3, label: '3. Confirmar' }
             ]
+            
         };
     }
 
@@ -54,38 +59,12 @@ class Checkout extends Component {
         return a.reduce((a, b) => a + b, 0);
     }
 
-    render() {
-        return (
-            <section className="checkout-container">
-               
-                <article>
-                    <header>
-                        <h2>MI COMPRA</h2>
-                    </header>
-
-                    <ProductsInCartList data={this.state.items} />
-
-                    <div className="subtotal-box">
-                        <div className="subtotal-box-row">
-                            <strong>SubTotal</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
-                        </div>
-                        <div className="subtotal-box-row total-item">
-                            <strong>TOTAL</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
-                        </div>
-                    </div>
-
-                    <button className="btn btn_action">COMPRAR</button>
-                    
-                </article>
-
-                <article style={{ display: 'none' }}>
-                    <header>
-                        <h2>FINALIZAR MI COMPRA</h2>
-                    </header>
-
+    _renderCheckoutStep(step) {
+        switch(step) {
+            case 1:
+                return (
                     <div className="step step-1">
                         <div className="step-container">
-                            <h3>1. Datos de facturación</h3>
                             <p>Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare. um velit. Nam nec.</p>
                         </div>
 
@@ -115,16 +94,11 @@ class Checkout extends Component {
                             </div>
                         </form>
                     </div>
-                </article>
-
-                <article style={{ display: 'none' }}>
-                    <header>
-                        <h2>FINALIZAR MI COMPRA</h2>
-                    </header>
-
+                );
+            case 2:
+                return (
                     <div className="step step-2">
                         <div className="step-container">
-                            <h3>2. Datos de envío</h3>
                             <p>Orbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare. um velit. Nam nec.</p>
                         </div>
 
@@ -174,18 +148,10 @@ class Checkout extends Component {
                             </div>
                         </form>
                     </div>
-                </article>
-
-
-                <article style={{ display: 'none' }}>
-                    <header>
-                        <h2>FINALIZAR MI COMPRA</h2>
-                    </header>
-
+                );
+            case 3:
+                return (
                     <div className="step step-3">
-                        <div className="step-container">
-                            <h3>3. Confirmar</h3>
-                        </div>
 
                         <ProductsInCartList data={this.state.items} />
 
@@ -205,10 +171,57 @@ class Checkout extends Component {
                             </ul>
         
                             <button className="btn btn_action">PAGAR CON MERCADOPAGO</button>
-                        
                         </div>
-
                     </div>
+                );
+            default:
+                return;
+        }
+    }
+
+    render() {
+        return (
+            <section className="checkout-container">
+               
+                <article style={{ display: 'none' }}>
+                    <header>
+                        <h2>MI COMPRA</h2>
+                    </header>
+
+                    <ProductsInCartList data={this.state.items} />
+
+                    <div className="subtotal-box">
+                        <div className="subtotal-box-row">
+                            <strong>SubTotal</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
+                        </div>
+                        <div className="subtotal-box-row total-item">
+                            <strong>TOTAL</strong>  <span>${this._calculateSubtotal(this.state.items)}</span>
+                        </div>
+                    </div>
+
+                    <button className="btn btn_action">COMPRAR</button>
+                    
+                </article>
+
+                <article >
+                    <header>
+                        <h2>FINALIZAR MI COMPRA</h2>
+                    </header>
+
+                    <ul className="step-indicator">
+                        {
+                            this.state.steps.map((step) => {
+                                return (
+                                    <li  key={step.id} className={this.state.activeStep === step.id ? 'active' : ''}>
+                                        <span>{step.label}</span>
+                                    </li>
+                                );
+                            })
+                        }
+                    </ul>           
+
+                    {this._renderCheckoutStep(this.state.activeStep)}
+
                 </article>
 
             </section>
